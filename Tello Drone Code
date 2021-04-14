@@ -1,0 +1,37 @@
+from djitellopy import Tello 
+import time
+tello = Tello()
+# Begin Leg 1
+tello.connect()
+ # Take off at 2 feet
+tello.takeoff()
+# Move up 4 feet
+tello.move_up(102)
+# Fly forward 5 feet East
+tello.move_forward(152)
+# Rotate 90 degrees CCC to North
+tello.rotate_counter_clockwise(90)
+# Begin Leg 2
+# Sleep for 5 seconds.
+tello.sleep(5)
+# Move Forward 6 feet North
+tello.move_forward(183)
+# Down 3 feet 
+tello.move_down(91)
+# Rotate 90 degrees CW
+# Begin leg 3
+tello.rotate_clockwise(90)
+# Move Forward 3 feet
+tello.move_forward(91)
+# Rotate 90 degrees CW to East
+# Begin leg 3
+tello.rotate_clockwise(90)
+# Up 1 foot
+tello.move_up(30)
+# Move Forward 3 feet East
+tello.move_forward(91)
+# Begin Leg 4
+# Fly East 6 feet
+tello.move_forward(183)
+
+tello.land()
